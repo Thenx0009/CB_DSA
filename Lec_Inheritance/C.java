@@ -1,4 +1,4 @@
-package Inheritance;
+package Lec_Inheritance;
 
 public class C extends P{
 	int d=1;
