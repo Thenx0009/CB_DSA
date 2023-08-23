@@ -3,6 +3,18 @@ package Abstraction;
 public class Stack_Interface implements Stack1 {
 
 	@Override
+	public void Display() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
 	public void push() {
 		// TODO Auto-generated method stub
 		
@@ -20,16 +32,8 @@ public class Stack_Interface implements Stack1 {
 		return 0;
 	}
 
-	@Override
-	public void Display() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
-	@Override
-	public boolean isFull() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 	
 }

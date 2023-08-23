@@ -7,6 +7,10 @@ public class Client {
 		Stack_Interface si = new Stack_Interface();
 		si.Display();
 		si.push();
+		System.out.println(Stack1.val);//accessing the variable
+		si.sayhey();
+		
+		
 	}
 
 }
