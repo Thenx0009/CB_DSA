@@ -10,7 +10,7 @@ public class generic_demo {
 		String arr1[] = {"Ram","Shyam" ,"Raj","Riya","Rahul"};
 		Display(arr1);
 	}
-	public static <T>void Display(T arr[]) {
+	public static <T>void Display(T arr[]) {//we made the function generic
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(arr[i]+" ");
 		}
@@ -22,4 +22,10 @@ public class generic_demo {
 //		}
 //		System.out.println();
 //	}
+	public static void Display(char arr[]) {
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+	}
 }
