@@ -1,6 +1,6 @@
 package ComparatorVsComparable;
 
-public class Cars {
+public class Cars implements Comparable<Cars>{
 	
 	int price;
 	int speed;
@@ -18,6 +18,12 @@ public class Cars {
 	@Override
 	public String toString() {
 		return "P:"+this.price + " S:"+this.speed + " C:"+this.color;
+	}
+
+	@Override
+	public int compareTo(Cars o) {
+		// TODO Auto-generated method stub
+		return this.price-o.price;
 	}
 	
 }

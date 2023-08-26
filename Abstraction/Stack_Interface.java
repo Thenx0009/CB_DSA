@@ -32,8 +32,6 @@ public class Stack_Interface implements Stack1 {
 		return 0;
 	}
 
-	
 
-	
 	
 }
