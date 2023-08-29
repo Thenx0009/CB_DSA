@@ -9,6 +9,4 @@ public class Car1ComparatorColor implements Comparator<Cars1> {
 		// TODO Auto-generated method stub
 		return o1.color.compareTo(o2.color);
 	}
-
-	
 }
