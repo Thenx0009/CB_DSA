@@ -6,48 +6,64 @@ public class Stack {
 	private int top = 0;
 
 	public Stack() {
-		this.data = new int[5];
+		this.data = new int[5];// Non-parameterised Constructor
 	}
 
 	public Stack(int cap) {
-		this.data = new int[cap];
+		this.data = new int[cap];// parameterised Constructor
+	}
+	
+	//isFull function 
+	public boolean isFull() {
+		if (this.top == this.data.length) {
+			return true;
+		}
+		return false;
 	}
 
+	//isEmpty function
 	public boolean isEmpty() {
 		if (top == 0) {
 			return true;
 		}
 		return false;
 	}
-
-	public boolean isFull() {
-		if (top == this.data.length) {
-			return true;
+	
+	//push function
+	public void push(int item) throws Exception {
+		if (isFull()) {
+			throw new Exception("Stack is Full");
 		}
-		return false;
-	}
-
-	public void push(int item) {
 		this.data[top] = item;
 		top++;
 	}
-
-	public int pop() {// here we overwrite the value
+	
+	//pop function
+	public int pop() throws Exception {
+		if (isEmpty()) {
+			throw new Exception("Stack is Empty");
+		}
 		top--;
 		return this.data[top];
 	}
-
-	public int peek() {
+	
+	//peek function
+	public int peek() throws Exception {
+		if (isEmpty()) {
+			throw new Exception("Stack is Empty");
+		}
 		return this.data[top - 1];
 	}
 	
+	//size function
 	public int size() {
 		return top;
 	}
 	
+	//display function
 	public void Display() {
-		for(int i=0;i<top;i++) {
-			System.out.print(this.data[i]+" ");
+		for (int i = 0; i < top; i++) {
+			System.out.print(this.data[i] + " ");
 		}
 		System.out.println();
 	}
