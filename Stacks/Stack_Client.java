@@ -12,13 +12,13 @@ public class Stack_Client {
 		st.push(30);
 		st.push(40);
 		st.push(50);
-		st.pop();
+		System.out.println("-->"+st.pop());
 		st.push(60);
 		st.Display();
 		System.out.println(st.peek());
 		System.out.println(st.size());
 		System.out.println("**************");
-		st.push(100);//Here STACK FULL exception generated
-		st.push(200);//Here STACK FULL exception generated
+		//st.push(100);//Here STACK FULL exception generated
+		//st.push(200);//Here STACK FULL exception generated
 	}
 }

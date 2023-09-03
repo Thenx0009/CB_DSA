@@ -47,7 +47,7 @@ public class Queue {
 		}
 		int rv = this.data[front];
 //     	front++;
-		front= (front+1)%data.length;
+		front= (front+1)%data.length; //front+1 == front++
 		size--;
 		return rv;
 	}

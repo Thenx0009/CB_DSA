@@ -14,7 +14,7 @@ public class Queue_Client {
 		q.Display();
 		System.out.println("---> "+q.dequeue());
 		System.out.println("---> "+q.dequeue());
-		q.Display();
+		q.Display(); 
 		System.out.println("size is "+q.size());
 	}
 
