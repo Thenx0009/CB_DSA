@@ -2,8 +2,9 @@ package Stacks;
 
 public class Stack {
 
-	private int data[];
+	//private int data[];
 	private int top = 0;
+	protected int data[];
 
 	public Stack() {
 		this.data = new int[5];// Non-parameterised Constructor
