@@ -6,7 +6,7 @@ public class First_Occurence {
 		// TODO Auto-generated method stub
 		
 		int arr[] = {2,13,7,5,3,4,5,6,3,9,3,100};
-		System.out.println(FirstIndex(arr,0,100));
+		System.out.println(FirstIndex(arr,0,3));
 	}
 
 	public static int FirstIndex(int arr[],int i,int item) {
