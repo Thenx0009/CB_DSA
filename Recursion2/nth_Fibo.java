@@ -5,7 +5,7 @@ public class nth_Fibo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int n = 7;
+		int n = 6;
 		System.out.println(Fibo(n));
 	}
 	
