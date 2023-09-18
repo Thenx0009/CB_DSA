@@ -8,7 +8,7 @@ public class Board_Path {
 		//System.out.println("\n"+BoardPath1(n,0,""));
 		System.out.println("\n"+BoardPath2(n,0,""));
 	}
-
+	//Method 1
 	public static int BoardPath1(int end,int curr,String ans) {
 		if(curr == end) {
 			System.out.print(ans+" ");
@@ -22,6 +22,7 @@ public class Board_Path {
 		int tp=BoardPath1(end,curr+3,ans+3);
 		return fp+sp+tp;
 	}
+	//Method 2 
 	//When there are more than 3 recursive calls then we write Recursive calls in the Loop
 	//Above function is written using loop
 	public static int BoardPath2(int end,int curr,String ans) {
