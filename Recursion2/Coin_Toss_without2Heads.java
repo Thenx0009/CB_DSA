@@ -15,9 +15,12 @@ public class Coin_Toss_without2Heads {
 			count++;
 			return;
 		}
-		if(ans.length()==0 || ans.charAt(ans.length()-1)!='H') {
+		if(ans.length()==0 || ans.charAt(ans.length()-1)!='H') {//This condition doesn't print 2 consecutive HEADS
 			coin(n-1,ans+"H");
 		}
-		coin(n-1,ans+"T");
+		if(ans.length()==0 || ans.charAt(ans.length()-1)!='T') {//This condition doesn't print 2 consecutive TAILS
+			coin(n-1,ans+"T");
+		}
+		//coin(n-1,ans+"T");
 	}
 }
