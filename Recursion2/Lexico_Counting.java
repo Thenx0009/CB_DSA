@@ -1,14 +1,16 @@
-package Recursion;
+package Recursion2;
 
 public class Lexico_Counting {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n = 1000;
-		counting(0, n);
+		counting(n, 0);
 	}
-	public static void counting(int curr, int n) {
-		if (curr > n) {
+
+	public static void counting(int n, int curr) {
+		
+		if(curr>n) {
 			return;
 		}
 		System.out.println(curr);
@@ -17,9 +19,8 @@ public class Lexico_Counting {
 			i = 1;
 		}
 		for (; i <= 9; i++) {
-			counting(curr * 10 + i, n);
+			counting(n,curr*10+i);
 		}
-
 	}
 
 }
