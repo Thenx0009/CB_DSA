@@ -13,13 +13,23 @@ public class Transpose {
 			System.out.println();
 		}
 	}
-	public static void transpose(int arr[][]) {
-		for(int i=0;i<arr.length;i++) {
-			for(int j=i+1;j<arr[0].length;j++) {
-				int temp = arr[i][j];
-				arr[i][j] = arr[j][i];
-				arr[j][i] = temp;
-			}
-		}
-	}
+//	public static void transpose(int arr[][]) {
+//		for(int i=0;i<arr.length;i++) {
+//			for(int j=i+1;j<arr[0].length;j++) {
+//				int temp = arr[i][j];
+//				arr[i][j] = arr[j][i];
+//				arr[j][i] = temp;
+//			}
+//		}
+//	}
+	public static int[][] transpose(int[][] matrix) {
+    for(int i=0;i<matrix.length;i++){
+        for(int j=i+1;j<matrix[0].length;j++){
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+    return matrix;
+}
 }
