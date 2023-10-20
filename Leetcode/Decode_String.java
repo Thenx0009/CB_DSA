@@ -1,5 +1,7 @@
 package Leetcode;
+
 import java.util.*;
+
 public class Decode_String {
 
 	public static void main(String[] args) {
@@ -9,51 +11,38 @@ public class Decode_String {
 	}
 
 	public static String decodeString(String s) {
+		Stack<Integer> is = new Stack<>();
+		Stack<StringBuilder> ss = new Stack<>();
 
-		Stack<Integer> numStack = new Stack<>();
-		Stack<String> stringStack = new Stack<>();
-		int k = 0;
+		int n = s.length(), num = 0;
+		StringBuilder str = new StringBuilder();
 
-		for (char c : s.toCharArray()) {
+		for (char ch : s.toCharArray()) {
+			// There will be 4 types of characters --> number, [ , ], character
 
-			if (Character.isDigit(c)) {
-				k = (k * 10) + (c - '0');
-				continue;
+			if (ch >= '0' && ch <= '9') {
+				num = (num * 10) + ch - '0';
+			} 
+			else if (ch == '[') {
+				ss.push(str);
+				str = new StringBuilder();
+
+				is.push(num);
+				num = 0;
+			} 
+			else if (ch == ']') {
+				StringBuilder temp = str;
+				str = ss.pop();
+				int count = is.pop();
+
+				while (count-- > 0) {
+					str.append(temp);
+				}
+			} 
+			else {
+				str.append(ch);
 			}
-
-			if (c == '[') {
-				numStack.push(k);
-				k = 0;
-				stringStack.push(String.valueOf(c));
-				continue;
-			}
-
-			if (c != ']') {
-				stringStack.push(String.valueOf(c));
-				continue;
-			}
-
-			StringBuilder temp = new StringBuilder();
-			while (!stringStack.peek().equals("["))
-				temp.insert(0, stringStack.pop());
-
-			// remove the "["
-			stringStack.pop();
-
-			// Get the new string
-			StringBuilder replacement = new StringBuilder();
-			int count = numStack.pop();
-			for (int i = 0; i < count; i++)
-				replacement.append(temp);
-
-			// Add it to the stack
-			stringStack.push(replacement.toString());
 		}
-
-		StringBuilder result = new StringBuilder();
-		while (!stringStack.empty()) {
-			result.insert(0, stringStack.pop());
-		}
-		return result.toString();
+		return str.toString();
 	}
 }
