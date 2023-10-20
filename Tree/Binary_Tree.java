@@ -27,7 +27,7 @@ public class Binary_Tree {
 		if (hlc == true) {
 			nn.left = Createtree();
 		}
-		boolean hrc = sc.nextBoolean();
+		boolean hrc = sc.nextBoolean();// hrc-->has right child
 		if (hrc == true) {
 			nn.right = Createtree();
 		}
