@@ -5,6 +5,10 @@ public class Quick_Sort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int arr[] = { 7, 5, 3, 1, 9, 4 };
+		//idx=0-->1-->2
+		//3 5 7 1 9 4
+		//3 1 7 5 9 4
+		//3 1 4 5 9 7
 		Quick_sort(arr, 0, arr.length - 1);
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
