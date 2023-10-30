@@ -100,6 +100,7 @@ public class Binary_Tree {
 	//Preorder Traversal
 	public void preorder() {
 		preorder(this.root);
+		System.out.println();
 	}
 	private void preorder(Node nn) {
 		if(nn==null) {
@@ -108,13 +109,14 @@ public class Binary_Tree {
 		//first print the root data
 		//second print the leftsubtree call data
 		//third print the rightsubtree call data
-		System.out.println(nn.data);
+		System.out.print(nn.data+" ");
 		preorder(nn.left);
 		preorder(nn.right);
 	}
 	//POStOrder Traversal
 	public void POSt0rder() {
 		POStOrder(this.root);
+		System.out.println();
 	}
 	public void POStOrder(Node nn) {
 		if(nn==null) {
@@ -125,11 +127,12 @@ public class Binary_Tree {
 		//third print the root data
 		POStOrder(nn.left);
 		POStOrder(nn.right);
-		System.out.println(nn.data);
+		System.out.print(nn.data+" ");
 	}
 	//INOrder Traversal
 	public void INOrder() {
 		INOrder(this.root);
+		System.out.println();
 	}
 	private void INOrder(Node nn) {
 		if(nn==null) {
@@ -139,7 +142,7 @@ public class Binary_Tree {
 		//second print the root data
 		//third print the rightsubtree call data
 		INOrder(nn.left);
-		System.out.println(nn.data);
+		System.out.print(nn.data+" ");
 		INOrder(nn.right);
 	}
 	//level order traversal
@@ -148,7 +151,7 @@ public class Binary_Tree {
 		queue.add(root);
 		while(!queue.isEmpty()){
 			Node rv = queue.remove();
-			System.out.print(rv.data);
+			System.out.print(rv.data+" ");
 			if(rv.left!=null) {
 				queue.add(rv.left);
 			}
