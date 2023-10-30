@@ -1,6 +1,8 @@
 package Tree;
 
-import java.util.Scanner;
+import java.util.*;
+
+
 
 public class Binary_Tree {
 
@@ -139,5 +141,20 @@ public class Binary_Tree {
 		INOrder(nn.left);
 		System.out.println(nn.data);
 		INOrder(nn.right);
+	}
+	//level order traversal
+	public void levelOrder() {
+		LinkedList<Node> queue = new LinkedList<>();
+		queue.add(root);
+		while(!queue.isEmpty()){
+			Node rv = queue.remove();
+			System.out.print(rv.data);
+			if(rv.left!=null) {
+				queue.add(rv.left);
+			}
+			if(rv.right!=null) {
+				queue.add(rv.right);
+			}
+		}
 	}
 }

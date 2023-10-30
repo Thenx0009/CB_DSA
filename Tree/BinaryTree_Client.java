@@ -12,6 +12,7 @@ public class BinaryTree_Client {
 		bt.PreOrder();
 		bt.POStOrder();
 		bt.INOrder();
+		bt.levelorder();
 	}
 
 }
