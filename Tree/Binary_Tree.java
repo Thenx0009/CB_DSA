@@ -95,4 +95,49 @@ public class Binary_Tree {
 		int rightheight = height(nn.right);
 		return Math.max(leftheight,rightheight)+1;
 	}
+	//Preorder Traversal
+	public void preorder() {
+		preorder(this.root);
+	}
+	private void preorder(Node nn) {
+		if(nn==null) {
+			return;
+		}
+		//first print the root data
+		//second print the leftsubtree call data
+		//third print the rightsubtree call data
+		System.out.println(nn.data);
+		preorder(nn.left);
+		preorder(nn.right);
+	}
+	//POStOrder Traversal
+	public void POSt0rder() {
+		POStOrder(this.root);
+	}
+	public void POStOrder(Node nn) {
+		if(nn==null) {
+			return;
+		}
+		//first print the leftsubtree call data
+		//second print the rightsubtree call data
+		//third print the root data
+		POStOrder(nn.left);
+		POStOrder(nn.right);
+		System.out.println(nn.data);
+	}
+	//INOrder Traversal
+	public void INOrder() {
+		INOrder(this.root);
+	}
+	private void INOrder(Node nn) {
+		if(nn==null) {
+			return;
+		}
+		//first print leftsubtree call data
+		//second print the root data
+		//third print the rightsubtree call data
+		INOrder(nn.left);
+		System.out.println(nn.data);
+		INOrder(nn.right);
+	}
 }
