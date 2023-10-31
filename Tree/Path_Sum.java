@@ -26,7 +26,7 @@ public class Path_Sum {
 			if (root == null) {
 				return false;
 			}
-			if (root.left == null || root.right == null) {
+			if (root.left == null && root.right == null) {
 				return targetSum - root.val == 0;
 			}
 			Boolean ls = hasPathSum(root.left, targetSum - root.val);
