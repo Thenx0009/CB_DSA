@@ -159,5 +159,30 @@ public class Binary_Tree {
 				queue.add(rv.right);
 			}
 		}
+		System.out.println();
 	}
+	//To print the leaf nodes
+	public void printLeafNodes() {
+		printLeafNodes(root);
+		System.out.println();
+	}
+	private static void printLeafNodes(Node nn) {
+        if (nn == null) {
+            return;
+        }
+        LinkedList<Node> queue = new LinkedList<>();
+        queue.add(nn);
+        while(!queue.isEmpty()){
+           Node rv = queue.remove();
+           if(rv.left==null && rv.right==null){
+               System.out.print(rv.data+" ");
+           }
+           if(rv.left!=null){
+               queue.add(rv.left);
+           }
+           if(rv.right!=null){
+               queue.add(rv.right);
+           }
+        }
+    }
 }
