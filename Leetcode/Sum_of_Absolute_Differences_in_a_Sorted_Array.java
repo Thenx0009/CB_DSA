@@ -26,7 +26,6 @@ public class Sum_of_Absolute_Differences_in_a_Sorted_Array {
             arr2[i] = n*i - left + right - n*(nums.length-i - 1);
             left = left+n;
         }
-
         return arr2;
     }
 
