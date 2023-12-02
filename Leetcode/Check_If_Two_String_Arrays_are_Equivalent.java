@@ -18,6 +18,7 @@ public class Check_If_Two_String_Arrays_are_Equivalent {
 		for (String word : word2) {
 			str2.append(word);
 		}
+		
 		String s1 = str1.toString();
 		String s2 = str2.toString();
 		if (s1.equals(s2)) {
