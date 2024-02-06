@@ -31,8 +31,8 @@ public class Group_Anagrams {
 				map.put(sortedStr, newlist);
 			}
 		}
-		List<List<String>> ans  = new ArrayList<>(map.values());
 		
+		List<List<String>> ans  = new ArrayList<>(map.values());
 		return ans;
 	}
 }
