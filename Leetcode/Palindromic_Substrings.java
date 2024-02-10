@@ -1,7 +1,7 @@
 package Leetcode;
 
 public class Palindromic_Substrings {
-	 static int result = 0;
+	static int result = 0;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
