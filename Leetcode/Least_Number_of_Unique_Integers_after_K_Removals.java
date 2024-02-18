@@ -22,6 +22,7 @@ public class Least_Number_of_Unique_Integers_after_K_Removals {
 				map.put(val, 1);
 			}
 		}
+		
 		ArrayList<Map.Entry<Integer, Integer>> sortElements = new ArrayList<>(map.entrySet());
 		sortElements.sort((a, b) -> a.getValue() - b.getValue());
 
