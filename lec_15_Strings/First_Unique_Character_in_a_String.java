@@ -13,8 +13,14 @@ public class First_Unique_Character_in_a_String {
 	public static int firstUniqChar(String s) {
 		HashMap<Character, Integer> map = new HashMap<>();
 
-		for (char a : s.toCharArray()) {
-			map.put(a, map.getOrDefault(a, 0) + 1);
+		for(char ch : s.toCharArray()) {
+			if(map.containsKey(ch)) {
+				int count = map.get(ch);
+				map.put(ch, count+1);
+			}
+			else {
+				map.put(ch, 1);
+			}
 		}
 
 		for (int i = 0; i < s.length(); i++) {
