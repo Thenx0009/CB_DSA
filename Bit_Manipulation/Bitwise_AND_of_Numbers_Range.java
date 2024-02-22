@@ -9,12 +9,12 @@ public class Bitwise_AND_of_Numbers_Range {
 		System.out.println(rangeBitwiseAnd(left,right));
 	}
 	public static int rangeBitwiseAnd(int left, int right) {
-        int ans = right;
+        int result = right;
         while(right>left){
-            ans = right & (right-1);
-            right = ans;
+            result = right & (right-1);
+            right = result;
         } 
-        return ans;
+        return result;
     }
 
 }
