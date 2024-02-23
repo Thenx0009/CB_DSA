@@ -23,6 +23,7 @@ public class Find_the_Town_Judge {
 			}
 		}
 		return -1;
+		
 	}
 
 }
