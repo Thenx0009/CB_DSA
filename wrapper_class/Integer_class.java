@@ -23,6 +23,7 @@ public class Integer_class {
 		Integer x1=18;
 		Integer y=189;
 		Integer y1=189;
+		System.out.println();
 		System.out.println(x==x1);
 		System.out.println(y==y1);
 	}
